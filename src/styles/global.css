@@ -31,16 +31,18 @@ p {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    letter-spacing: 0.03em;
+    font-weight: 325;
 }
 
 h2{
-    font-size: 2rem;
-    font-weight: 300;
+    font-size: 2.5rem;
+    font-weight: 350;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 300;
 }
 
@@ -49,22 +51,32 @@ h3 {
 /* nav bar */
 
 nav {
+    /* to make it a fixed, distinct bar
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 0.95;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    */
     width: 100%;
-    height: 60px;
+    height: 100px;
+    margin-bottom: -100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: var(--background);
-    opacity: 0.95;
-    padding: 0 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
+    padding: 2rem 3rem;
     z-index: 1000;
-    
+    position: relative;
+}
+
+nav p a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--jet-black);
 }
 
 nav ul{
@@ -84,6 +96,7 @@ nav li{
     height: 50px;
     width: 100px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 nav li:hover::before {
@@ -97,11 +110,11 @@ nav li:hover::before {
     z-index: -1;
 }
 
-nav a {
+nav li a {
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--jet-black);
-    text-transform: uppercase;
+    font-weight: 800;
 }
 
 .sidebar {
@@ -144,28 +157,36 @@ nav a {
 
 /* universal design elements */
 
-.sectionTitleLine {
-    width: 300px;
-    height: 4px;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    background: black;
+.sectionTitleLeft {
+    position: relative;
+    padding: 0 0 1rem 5rem;
 }
 
-.sectionTitleLine.left{
-    margin-left: -2rem;
-}
-.sectionTitleLine.orange{
-    background: orange;
+.sectionTitleLeft::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background: var(--orange);
 }
 
-.sectionTitleLine.black {
-    background: black;
+.sectionTitleCenter {
+    position: relative;
 }
 
-.sectionTitleLine.center {
-    margin: 0.5rem auto 1rem auto;
+.sectionTitleCenter::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: var(--orange);
 }
+
 
 /* hero */
 
@@ -175,7 +196,8 @@ nav a {
     margin: 0;
     background-image: url('/../hero-geometric-background.png');
     background-size: cover;
-    background-position: bottom;
+    background-position: bottom right;
+
 }
 
 .hero-text {
@@ -188,7 +210,6 @@ nav a {
 
 .hero-text h1 {
     letter-spacing: 0.03em;
-    font-size: 3.5rem;
     font-weight: 325;
 }
 
@@ -198,7 +219,6 @@ nav a {
 
 .tagline p {
     font-size: 1.2rem;
-    color: grey;
 }
 
 .orange-line {
@@ -209,20 +229,68 @@ nav a {
     margin-top: 2rem;
 }
 
+
+@media (max-width: 1000px) {
+    .hero-text {
+        justify-content: flex-start;
+        padding-top: 5rem;
+    }
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero-text {
+        padding: 2rem;
+        justify-content: center;
+    }
+}
+
 /* about */
 
 .about{
     display: grid;
     height: 100vh;
-    grid-template-columns: 1.5fr 1fr;
-    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
     background: var(--blue);
 }
 
+.aboutSectionTitle {
+    position: relative;
+}
+
+.aboutSectionTitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--background);
+}
+
 .about-content{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.about-content h2 {
+    position: relative;
+    padding: 0 0 1rem 5rem;
+}
+
+.about-text {
+    padding: 2rem 0 0 5rem;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
 }
 
 .about-image {
@@ -240,18 +308,36 @@ nav a {
 .featured {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    justify-content: center;
+    padding: 5rem;
+    text-align: center;
+}
+
+.featured h2 {
+    margin-bottom: 1rem;
 }
 
 .featuredWorks {
+    margin-top: 2rem;
     display: flex;
     gap: 1rem;
 }
 
 .featuredWork {
     flex: 1;
-    background: #f0f0f0;
+    background: none;
     padding: 1rem;
+}
+
+.featuredWork img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.featuredWork h3 {
+    margin-bottom: 0.5rem;
 }
 
 /* theory of change */
@@ -259,32 +345,104 @@ nav a {
 .theoryOfChange {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 5rem 0;
+}
+
+.theoryOfChange p {
+    padding: 0 5rem;
+    margin-top: 2rem;
 }
 
 .principles{
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
+    padding: 2rem 15%;
 }
 
 .principle {
-    background: darkblue;
+    background: var(--jet-black);
     padding: 1rem;
     color: white;
+    width: 100%;
+    cursor: pointer;
+}
+
+.principle-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    min-height: 60px;
+}
+
+.principle-title h3 {
+    margin: 0;
+}
+
+.expand-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.expand-btn img {
+    width: 40px;
+    height: 40px;
+}
+
+.expand-btn:hover {
+    opacity: 0.8;
+}
+
+.principle-text {
+    margin: 0 !important;
+    padding: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.principle-text.expanded {
+    margin-top: 1rem !important;
+    max-height: 500px;
+    opacity: 1;
 }
 
 /* focus areas */
 
 .focusAreas {
-    text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
+    padding: 5rem;
+    text-align: center;
+    align-items: center;
+}
+
+.focusAreas h2 {
+    margin-bottom: 1rem;
+    position: relative;
 }
 
 .areas {
     display: flex;
-    margin: auto;
-    gap: 1rem;
+    justify-content: center;
+    margin: 2rem auto;
+    gap: 10px;
+}
+
+.area {
+    flex: 1;
+    background: none;
+    padding: 2rem;
+}
+
+.area h3 {
+    margin-bottom: 1rem;
 }

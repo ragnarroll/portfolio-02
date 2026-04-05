@@ -28,12 +28,15 @@ import Header from '../components/Header.astro';
 
 	<section class="about">
 		<div class="about-content">
-			<h2>Education must transform</h2>
-			<div class="sectionTitleLine left black"></div>
-			<p>As a student, educator, and learning designer, I am constantly grappling with this tension: is education for individual success or collective flourishing?</p>
-			<p>I spent years chasing success, only to find myself isolated, suffocated by the emptiness of my pursuits. I came to realize that the unequal, hyper-individual pursuit of success is tearing our society apart. But the problem is larger than any individual's choices: the very structure of our education system rewards self-interested behavior.</p>		
-			<p>I'm dedicated to deconstructing this system of self-interest and rebuilding one that promotes democratic, shared progress.</p>
-			<p>In this portfolio, I develop the idea of education as a public process through my writing, research, and projects. If any of this resonates with you, reach out to me. I'd love to talk.</p>
+			<div class = "aboutSectionTitle">
+				<h2>Why education?</h2>
+			</div>
+			<div class ="about-text">
+				<p>As a student, educator, and learning designer, I am constantly grappling with this tension: is education for individual success or collective flourishing?</p>
+				<p>I spent years chasing success, only to find myself isolated, suffocated by the emptiness of my pursuits. I came to realize that the unequal, hyper-individual pursuit of success is tearing our society apart. But the problem is larger than any individual's choices: the very structure of our education system rewards self-interested behavior.</p>		
+				<p>I'm dedicated to deconstructing this system of self-interest and rebuilding one that promotes democratic, shared progress.</p>
+				<p>In this portfolio, I develop the idea of education as a public process through my writing, research, and projects. If any of this resonates with you, reach out to me. I'd love to talk.</p>
+			</div>
 		</div>
 		<div class="about-image">
 			<img src="/../profile-about-frame.png" alt="a headshot of michael standing behind a podium that says georgetown university" />
@@ -41,49 +44,70 @@ import Header from '../components/Header.astro';
 	</section>
 
 	<section class="featured">
-		<h2>What does redesigning education look like?</h2>
-		<div class="sectionTitleLine center orange"></div>
-		
+		<div class="sectionTitleCenter">
+			<h2>What does redesigning education look like?</h2>
+		</div>
 		<div class="featuredWorks">
 			<div class="featuredWork">
-				<h3>Project 1</h3>
-				<p>Description of project 1.</p>
+				<img src="/../tennis-journey-blue.png" alt="Project 1" />
+				<h3>The Tennis Journey</h3>
+				<p>Part of a tennis academy redesign, aiming to establish a lifelong learning approach. This workshop trained young players to identify burnout and sustain joy.</p>
 			</div>
 			<div class="featuredWork">
-				<h3>Project 2</h3>
-				<p>Description of project 2.</p>
+				<img src="/../asu-social-embed.png" alt="Project 2" />
+				<h3>The Community-University</h3>
+				<p>A model for how to restructure the university to make it more responsive to local needs, based on ASU’s anchor institution approach.</p>
 			</div>
 			<div class="featuredWork">
-				<h3>Project 3</h3>
-				<p>Description of project 3.</p>
+				<img src="/../livingston-college.png" alt="Project 3" />
+				<h3>A college for social change</h3>
+				<p>A case study analyzing the brief success of Livingston College at Rutgers, an experimental college addressing local issues like de facto segregation and urban displacement.</p>
 			</div>
 		</div>
 	</section>
 
 	<section class="theoryOfChange">
-		<h2>My theory of change</h2>
-		<div class="sectionTitleLine left orange"></div>
+		<div class="sectionTitleLeft">
+			<h2>My theory of change</h2>
+		</div>
+		
 		<p>Recreating the education system is a generational process requiring empathy, persistence, and faith. Nevertheless, now is the time for radical change. </p>
 		<p>My theory of change is guided by three principles:</p>
 		<div class ="principles">
 			<div class="principle">
-				<h3>designing with, not for</h3>
-				<p>hidden</p>
+				<div class="principle-title">
+					<button class="expand-btn" aria-label="Expand principle">
+						<img src="/expand.png" alt="expand" />
+					</button>
+					<h3>designing with, not for</h3>
+				</div>
+				<p class="principle-text">hidden</p>
 			</div>
 			<div class="principle">
-				<h3>systems thinking</h3>
-				<p>hidden</p>
+				<div class="principle-title">
+					<button class="expand-btn" aria-label="Expand principle">
+						<img src="/expand.png" alt="expand" />
+					</button>
+					<h3>systems thinking</h3>
+				</div>
+				<p class="principle-text">hidden</p>
 			</div>
 			<div class="principle">
-				<h3>cyclical processes</h3>
-				<p>hidden</p>
+				<div class="principle-title">
+					<button class="expand-btn" aria-label="Expand principle">
+						<img src="/expand.png" alt="expand" />
+					</button>
+					<h3>cyclical processes</h3>
+				</div>
+				<p class="principle-text">hidden</p>
 			</div>
 		</div>
 	</section>
 
 	<section class="focusAreas">
-		<h2>Focus areas</h2>
-		<div class="sectionTitleLine center orange"></div>
+		<div class="sectionTitleCenter">
+			<h2>Focus areas</h2>
+		</div>
 		<div class="areas">
 			<div class="area">
 				<h3>Rethinking pipelines</h3>
@@ -108,6 +132,28 @@ import Header from '../components/Header.astro';
 		const sidebar = document.querySelector('.sidebar') as HTMLElement;
 		sidebar.style.display = 'none';
 	}
+
+	// Handle expand/collapse functionality for principles
+	document.querySelectorAll('.principle').forEach(principle => {
+		principle.addEventListener('click', function() {
+			const img = this.querySelector('img');
+			const text = this.querySelector('.principle-text');
+			
+			const isExpanded = text.classList.contains('expanded');
+			
+			if (isExpanded) {
+				// Collapse
+				text.classList.remove('expanded');
+				img.src = '/expand.png';
+				img.alt = 'expand';
+			} else {
+				// Expand
+				text.classList.add('expanded');
+				img.src = '/collapse.png';
+				img.alt = 'collapse';
+			}
+		});
+	});
 </script>
 
 	</body>
