@@ -1,0 +1,187 @@
+---
+import '../../styles/global.css';
+import '../../styles/projectGrid.css';
+import Header from '../../components/Header.astro';
+
+const projects = await Astro.glob('./*.md');
+const projectData = projects.map((project: any) => ({
+  frontmatter: project.frontmatter,
+  slug: project.url
+}));
+
+// Map category names to CSS classes
+const getCategoryClass = (category: string): string => {
+  const categoryMap: { [key: string]: string } = {
+    'Rethinking Pathways to Success': 'pathways',
+    'Place-Based Education': 'placeBased',
+    'Technology and Educational Equity': 'techEquity',
+  };
+  return categoryMap[category] || '';
+};
+
+// Get the primary category for styling (first category)
+const getPrimaryCategory = (categories: string[] | string | undefined): string => {
+  if (!categories) return '';
+  const categoryArray = Array.isArray(categories) ? categories : [categories];
+  return categoryArray[0] || '';
+};
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Projects</title>
+	</head>
+	<body>
+	<Header />
+    <!-- 
+    <div class = "projectsPageHeader">
+        <div class = "pageTitle">
+            <h1>My Projects</h1>
+        </div> 
+    </div>
+    -->
+    <div class="pageTitle">
+    <h1>Projects</h1>
+    <div class="orange-line"></div>
+    </div>
+    <div class="gridLayout">
+    <div class = "filterSection">
+        <!-- 
+        <h2>Project Areas</h2>
+        <div class = "filterSkills">
+            <p>Filter by Skills:</p>
+            <button class="filterButton">All</button>
+            <button class="filterButton">Design Thinking</button>
+            <button class="filterButton">Research</button>
+            <button class="filterButton">Applied AI</button>
+            <button class="filterButton">Web Design & Development</button>
+            <button class="filterButton">Curriculum Design</button>
+            <button class="filterButton">Teaching</button>
+            <button class="filterButton">Project Management</button>
+        </div> 
+        -->
+
+        <div class = "filterCategories">
+            <p>Filter by Focus Area</p>
+            <button class="filterButton">All</button>
+            <button class="filterButton pathways">Rethinking Pathways to Success</button>
+            <button class="filterButton placeBased">Place-Based Education</button>
+            <button class="filterButton techEquity">Technology and Educational Equity</button>
+        </div>
+    </div>
+
+    <div class = "projectsGrid">
+        {projectData.map((project: any) => {
+          const primaryCat = getPrimaryCategory(project.frontmatter.category);
+          const categoryClass = getCategoryClass(primaryCat);
+          const categories = Array.isArray(project.frontmatter.category) ? project.frontmatter.category : [project.frontmatter.category];
+          const tags = project.frontmatter.tags || project.frontmatter.Tags || [];
+          return (
+            <a class={`projectCard ${categoryClass}`} href={project.slug} data-categories={JSON.stringify(categories)} data-tags={JSON.stringify(tags)}>
+                <div class = "projectCardText">
+                    <div class="projectCardCategories">
+                        {project.frontmatter.category && (Array.isArray(project.frontmatter.category) ? project.frontmatter.category : [project.frontmatter.category]).map((cat: string) => (
+                            <p class={`projectCategory ${getCategoryClass(cat)}`}>{cat}</p>
+                        ))}
+                    </div>
+                    <div class = "projectCardTitle">
+                        <h3>{project.frontmatter.title}</h3>
+                        <p>{project.frontmatter.subtitle}</p>
+                    </div>
+                    <div class = "projectCardSkills">
+                        {(project.frontmatter.tags || project.frontmatter.Tags || []).map((tag: string) => (
+                            <p class = "skillTag">{tag}</p>
+                        ))}
+                    </div>
+                </div>
+                {project.frontmatter.image && project.frontmatter.image.src && (
+                    <div class={`projectCardImage ${categoryClass}`}>
+                        <img class ={`${categoryClass}`} src={project.frontmatter.image.src} alt={project.frontmatter.image.alt} />
+                    </div>
+                )}
+            </a>
+          );
+        })}
+    </div>
+    </div>
+    <script>
+        // Filter functionality - single select for both skills and categories
+        let activeSkillFilter: string | null = null;
+        let activeCategoryFilter: string | null = null;
+
+        const skillButtons = document.querySelectorAll('.filterSkills .filterButton');
+        const categoryButtons = document.querySelectorAll('.filterCategories .filterButton');
+        const projectCards = document.querySelectorAll('.projectCard');
+
+        function updateFilters() {
+            projectCards.forEach((card: any) => {
+                const cardCategories = JSON.parse(card.dataset.categories || '[]');
+                const cardTags = JSON.parse(card.dataset.tags || '[]');
+
+                const matchesSkill = !activeSkillFilter || 
+                    cardTags.some((tag: string) => tag === activeSkillFilter);
+
+                const matchesCategory = !activeCategoryFilter || 
+                    cardCategories.some((cat: string) => cat === activeCategoryFilter);
+
+                if (matchesSkill && matchesCategory) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        skillButtons.forEach((button: any) => {
+            button.addEventListener('click', () => {
+                const skillName = button.textContent.trim();
+
+                if (skillName === 'All') {
+                    activeSkillFilter = null;
+                    skillButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                } else {
+                    activeSkillFilter = skillName;
+                    skillButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                }
+                updateFilters();
+            });
+        });
+
+        categoryButtons.forEach((button: any) => {
+            button.addEventListener('click', () => {
+                const categoryName = button.textContent.trim();
+
+                if (categoryName === 'All') {
+                    activeCategoryFilter = null;
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                } else {
+                    activeCategoryFilter = categoryName;
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                }
+                updateFilters();
+            });
+        });
+
+        // Initialize with "All" buttons active
+        skillButtons.forEach(btn => {
+            if (btn.textContent.trim() === 'All') {
+                btn.classList.add('active');
+            }
+        });
+        categoryButtons.forEach(btn => {
+            if (btn.textContent.trim() === 'All') {
+                btn.classList.add('active');
+            }
+        });
+    </script>
+
+</body>
+</html>

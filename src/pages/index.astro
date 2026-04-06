@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <html lang="en">
@@ -67,39 +68,44 @@ import Header from '../components/Header.astro';
 	</section>
 
 	<section class="theoryOfChange">
-		<div class="sectionTitleLeft">
-			<h2>My theory of change</h2>
-		</div>
 		
-		<p>Recreating the education system is a generational process requiring empathy, persistence, and faith. Nevertheless, now is the time for radical change. </p>
-		<p>My theory of change is guided by three principles:</p>
-		<div class ="principles">
-			<div class="principle">
-				<div class="principle-title">
-					<button class="expand-btn" aria-label="Expand principle">
-						<img src="/expand.png" alt="expand" />
-					</button>
-					<h3>designing with, not for</h3>
-				</div>
-				<p class="principle-text">hidden</p>
+		<div class = "theoryOfChangeContainer">
+			<div class = "theoryOfChangeText">
+				<div class= "theoryOfChangeTitle">
+				<h2>My theory of change</h2>
 			</div>
-			<div class="principle">
-				<div class="principle-title">
-					<button class="expand-btn" aria-label="Expand principle">
-						<img src="/expand.png" alt="expand" />
-					</button>
-					<h3>systems thinking</h3>
-				</div>
-				<p class="principle-text">hidden</p>
+					<p>Recreating the education system is a generational process requiring empathy, persistence, and faith. Nevertheless, now is the time for radical change. </p>
+					<p>My theory of change is guided by three principles:</p>
 			</div>
-			<div class="principle">
-				<div class="principle-title">
-					<button class="expand-btn" aria-label="Expand principle">
-						<img src="/expand.png" alt="expand" />
-					</button>
-					<h3>cyclical processes</h3>
+
+			<div class ="principles">
+				<div class="principle">
+					<div class="principle-title">
+						<button class="expand-btn" aria-label="Expand principle">
+							<img src="/expand.png" alt="expand" />
+						</button>
+						<h3>designing with, not for</h3>
+					</div>
+					<p class="principle-text">hidden</p>
 				</div>
-				<p class="principle-text">hidden</p>
+				<div class="principle">
+					<div class="principle-title">
+						<button class="expand-btn" aria-label="Expand principle">
+							<img src="/expand.png" alt="expand" />
+						</button>
+						<h3>systems thinking</h3>
+					</div>
+					<p class="principle-text">hidden</p>
+				</div>
+				<div class="principle">
+					<div class="principle-title">
+						<button class="expand-btn" aria-label="Expand principle">
+							<img src="/expand.png" alt="expand" />
+						</button>
+						<h3>cyclical processes</h3>
+					</div>
+					<p class="principle-text">hidden</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -109,20 +115,21 @@ import Header from '../components/Header.astro';
 			<h2>Focus areas</h2>
 		</div>
 		<div class="areas">
-			<div class="area">
-				<h3>Rethinking pipelines</h3>
+			<div class="area pathways">
+				<h3>Rethinking Pathways to Success</h3>
 				<p>Redefining the relationship between the K-12 system, the higher education system, and the workforce.</p>
 			</div>
-			<div class="area">
-				<h3>local embeddedness</h3>
+			<div class="area placeBased">
+				<h3>Place-Based Education</h3>
 				<p>Connecting civic leaders, educational institutions, and local non-profits to create a more cohesive support system for learners.</p>
 			</div>
-			<div class="area">
-				<h3>conscious ed tech</h3>
+			<div class="area techEquity">
+				<h3>Technology and Educational Equity</h3>
 				<p>Studying the design, adoption, and ethical implications of technologies such as: LERs, generative AI, predictive AI, and VR.</p>
 			</div>
 		</div>
 	</section>
+	<Footer />
 <script>
 	function showSidebar() {
 		const sidebar = document.querySelector('.sidebar') as HTMLElement;
@@ -135,11 +142,13 @@ import Header from '../components/Header.astro';
 
 	// Handle expand/collapse functionality for principles
 	document.querySelectorAll('.principle').forEach(principle => {
-		principle.addEventListener('click', function() {
+		principle.addEventListener('click', function(this: HTMLElement) {
 			const img = this.querySelector('img');
 			const text = this.querySelector('.principle-text');
 			
-			const isExpanded = text.classList.contains('expanded');
+			if (!text || !img) return;
+
+			const isExpanded = text?.classList.contains('expanded');
 			
 			if (isExpanded) {
 				// Collapse

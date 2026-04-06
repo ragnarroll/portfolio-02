@@ -1,0 +1,57 @@
+/* project page */
+
+.projectHeader {
+    display: flex;
+    padding: 2rem 5rem;
+    width: 100%;
+    height: 100vh;
+}
+
+.projectHeaderText {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.projectHeaderImage {
+    flex: 1;
+    align-self: center;
+    width: 400px;
+    height: 300px;
+}
+
+.projectHeaderImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.headerProjectCategory {
+    display: flex;
+    gap: 1rem;
+    color: var(--orange);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.headerCategory {
+    font-size: 1rem;
+}
+
+.projectTags {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.25rem 0.5rem;
+    border: 1px dashed var(--jet-black);
+    border-radius: 4px;
+    font-size: 0.8rem;
+}

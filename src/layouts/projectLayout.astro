@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+import '../styles/projectPage.css';
+import Header from '../components/Header.astro';
+
+const { frontmatter } = Astro.props;
+const { title, subtitle, description, category, tags, image } = frontmatter || {};
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+	<Header />
+    <main>
+        <div class="projectHeader">
+
+            <div class="projectHeaderText">
+            {category && category.length > 0 && (
+                <div class="headerProjectCategory">
+                    {category.map((cat: string) => <p class="headerCategory">{cat}</p>)}
+                </div>
+            )}
+            <h2>{title}</h2>
+            {subtitle && <h3>{subtitle}</h3>}
+            {description && <p>{description}</p>}
+            {tags && tags.length > 0 && (
+                <div class = "projectTags">
+                    {tags.map((tag: string) => <p class="tag">{tag}</p>)}
+                </div>
+            )}
+        </div>
+        
+            <div class="projectHeaderImage">
+                {image && image.src && <img src={image.src} alt={image.alt} />}
+            </div>
+        </div>
+        <slot />
+    </main> 
+    </body>
+</html>
