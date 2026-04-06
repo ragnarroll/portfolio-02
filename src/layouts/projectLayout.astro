@@ -40,7 +40,9 @@ const { title, subtitle, description, category, tags, image } = frontmatter || {
                 {image && image.src && <img src={image.src} alt={image.alt} />}
             </div>
         </div>
-        <slot />
-    </main> 
+        <div class="projectContainer">
+            <slot />
+        </div>
+    </main>
     </body>
 </html>

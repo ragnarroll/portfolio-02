@@ -3,11 +3,14 @@ import '../../styles/global.css';
 import '../../styles/projectGrid.css';
 import Header from '../../components/Header.astro';
 
-const projects = await Astro.glob('./*.md');
-const projectData = projects.map((project: any) => ({
-  frontmatter: project.frontmatter,
-  slug: project.url
-}));
+const projects = import.meta.glob('./*.md', { eager: true });
+const projectData = Object.entries(projects).map(([path, module]: any) => {
+  const slug = '/projects/' + path.replace('./', '').replace('.md', '/');
+  return {
+    frontmatter: module.frontmatter,
+    slug: slug
+  };
+});
 
 // Map category names to CSS classes
 const getCategoryClass = (category: string): string => {
@@ -46,7 +49,7 @@ const getPrimaryCategory = (categories: string[] | string | undefined): string =
     -->
     <div class="pageTitle">
     <h1>Projects</h1>
-    <div class="orange-line"></div>
+    <div class=""></div>
     </div>
     <div class="gridLayout">
     <div class = "filterSection">
@@ -181,6 +184,21 @@ const getPrimaryCategory = (categories: string[] | string | undefined): string =
                 btn.classList.add('active');
             }
         });
+
+        // Handle URL filter parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const filterParam = urlParams.get('filter');
+        if (filterParam) {
+            const decodedFilter = decodeURIComponent(filterParam);
+            activeCategoryFilter = decodedFilter;
+            categoryButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent.trim() === decodedFilter) {
+                    btn.classList.add('active');
+                }
+            });
+            updateFilters();
+        }
     </script>
 
 </body>
