@@ -9,7 +9,7 @@ image: {
     src: "/../metrics.jpg",
     alt: "a picture of a screen showing graphs",
 }
-Tags: [Web Design & Development, Applied AI, Research]
+tags: [Web Design & Development, Applied AI, Research]
 ---
 
 
