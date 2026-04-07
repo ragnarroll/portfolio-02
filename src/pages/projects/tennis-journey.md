@@ -11,4 +11,20 @@ image:
 tags:
   - Curriculum Design
   - Teaching
+attachments:
+  - ../../portfolio-tennis-journey.pdf
 ---
+
+### Problem/Approach
+
+How can we design a lifelong learning approach to tennis that appeals to players at all levels—from recreational to Division 1?
+
+### Solution/Outcomes
+
+Invite speakers from across the lifespan and involve parents.
+Discussion of goals and priorities and fulfillment dashboards
+Analysis and awareness of extrinsic and intrinsic motivation
+
+### Artifacts
+Priority dashboard
+Reflection worksheet

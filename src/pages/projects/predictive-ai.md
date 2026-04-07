@@ -10,9 +10,14 @@ image: {
     alt: "a picture of a screen showing graphs",
 }
 tags: [Web Design & Development, Applied AI, Research]
+attachments: ../../portfolio-ai-enrollment-management.pdf
 ---
 
+### Problem/Approach
 
+Inequitable enrollment practices could be exacerbated by AI-powered marketing strategies, personalized messaging, and predictive analytics. Current financial strains & the demographic cliff could accelerate the integration of AI in enrollment pipelines.
 
+### Solution/Outcomes
 
-this is the sample text.
+To counteract the inequitable impacts of AI in the enrollment industry, selective institutions must adopt ethical data frameworks, industry-level agreements, and public accountability.
+

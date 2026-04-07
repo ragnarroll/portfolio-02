@@ -18,6 +18,7 @@ body {
     
     /* accents */
     --orange: #e36029;
+    --light-orange: #ffe6e1;
     --purple: #beb7df;
     --light-purple: #ebe7ff;
     --dark-purple: #392a79;
@@ -31,6 +32,7 @@ body {
 
 p {
     font-size: 1.2rem;
+    
 }
 
 h1 {
@@ -407,6 +409,7 @@ nav li a {
     flex: 1;
     padding: 1rem;
     border: 2px solid var(--jet-black);
+    border-radius: 10px;
     transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -560,6 +563,9 @@ nav li a {
 
 .area {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: none;
     padding: 2rem;
     border-radius: 10px;
@@ -570,7 +576,7 @@ nav li a {
 }
 
 .area:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(35, 44, 51, 0.15);
 }
 
@@ -580,15 +586,17 @@ nav li a {
 
 .area-dropdown {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    top: 0;
     right: 0;
+    width: 35%;
+    font-size: 1rem;
     background: rgba(35, 44, 51, 0.95);
+    border-radius: 0 5px 0 5px;
     color: var(--background);
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
-    transform: translateY(100%);
-    transition: transform 0.3s ease-out;
+    transform: translateY(-100%) translateX(100%);
+    transition: transform 0.1s ease-out;
     cursor: pointer;
 }
 
@@ -616,32 +624,36 @@ nav li a {
 }
 
 .pathwaysDark {
-    background: var(--dark-purple) !important;
-    border: 2px solid var(--dark-purple) !important;
+    background: var(--purple) !important;
+    
     color: white;
 }
 
 .placeBasedDark {
-    background: var(--dark-blue) !important;
-    border: 2px solid var(--dark-blue) !important;
+    background: var(--blue) !important;
+    
     color: white;
 }
 
 .techEquityDark {
-    background: var(--dark-rose) !important;
-    border: 2px solid var(--dark-rose) !important;
+    background: var(--rose) !important;
+    
     color: white;
 }
 
 
 @media (max-width: 1000px) {
     .hero-text {
-        justify-content: flex-start;
-        padding-top: 5rem;
+        justify-content: center;
+        
         padding-left: 2rem;
     }
     .hero-text h1 {
         font-size: 2.5rem;
+    }
+    .hero {
+        background-size: 150%;
+        background-repeat: no-repeat;
     }
 }
 

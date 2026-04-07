@@ -12,6 +12,7 @@ image:
 tags:
   - Curriculum Design
   - Design Thinking
+attachments: ../../Portfolio-UDP-Final.pdf
 ---
 
 ### Here’s the *Wicked Problem.*

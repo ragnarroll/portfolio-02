@@ -14,8 +14,12 @@ tags:
     - Web Design & Development 
     - Applied AI 
     - Research
+attachments:
+    - ../../portfolio-lers-tech.pdf
 ---
 
+### Problem/Approach
 
+How can employers address the paper ceiling? The degree gap is large, and skills-based hiring presents a shift in thinking about the degree as a proxy for skills. Instead, skills-based or skills-first hiring looks at the explicit evidence of a candidate’s skills and uses those as the primary consideration of whether the candidate deserves that job. However, employers face several issues. The first is how can they verify if a candidate has completed that skill from a reputable place? The second is how to anonymize the information for all parties involved? The third is much more difficult, which is how do you get employers to buy into this system?
 
-this is the sample text.
+### Solution/Outcomes
