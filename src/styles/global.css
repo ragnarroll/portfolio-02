@@ -671,8 +671,7 @@ nav li a {
     .about {
         grid-template-columns: 1fr;
         height: auto;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding: 5rem 2rem;
     }
     .about-content h2 { 
         padding: 2rem;
@@ -685,6 +684,7 @@ nav li a {
     }
     .theoryOfChangeContainer {
         flex-direction: column;
+        padding: 5rem 2rem;
     }
     .theoryOfChangeText {
         padding: 0;
@@ -692,9 +692,11 @@ nav li a {
      .principles {
         flex-direction: column;
         gap: 2rem;
+        padding: 5rem 2rem;
     }
     .focusAreas {
         height: auto;
+        padding: 5rem 2rem;
     }
     .areas {
         flex-direction: column;
