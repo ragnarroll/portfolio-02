@@ -252,14 +252,18 @@ a {
         padding: 2rem;
         overflow: visible;
         border-top: none;
+        height: auto;
     }
     .filterSection {
         position: relative;
         height: 350px;
         border-right: none;
+        display: none;
     }
     .projectsGrid {
         border: none;
+        overflow-y: visible;
+        height: auto;
     }
     .projectCard {
         flex-direction: column;
