@@ -133,15 +133,6 @@ import Footer from '../components/Footer.astro';
 	</section>
 	<Footer />
 <script>
-	function showSidebar() {
-		const sidebar = document.querySelector('.sidebar') as HTMLElement;
-		sidebar.style.display = 'flex';
-	}
-	function hideSidebar() {
-		const sidebar = document.querySelector('.sidebar') as HTMLElement;
-		sidebar.style.display = 'none';
-	}
-
 	// Handle expand/collapse functionality for principles
 	document.querySelectorAll('.principle').forEach(principle => {
 		principle.addEventListener('click', function(this: HTMLElement) {

@@ -168,6 +168,7 @@ a {
     gap: 0.5rem;
     width: fit-content;
     flex-wrap: wrap;
+    margin-bottom: 1rem;
 }
 
 
@@ -202,8 +203,8 @@ a {
 .projectCardSkills {
     display: flex;
     gap: 0.5rem;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem auto 1rem 1rem;
+    
 }
 
 .skillTag {
@@ -249,12 +250,19 @@ a {
     .gridLayout {
         grid-template-columns: 1fr;
         padding: 2rem;
+        overflow: visible;
+        border-top: none;
     }
     .filterSection {
         position: relative;
+        height: 350px;
+        border-right: none;
     }
     .projectsGrid {
         border: none;
+    }
+    .projectCard {
+        flex-direction: column;
     }
     .filterSection::after{
     content: '';
@@ -264,8 +272,15 @@ a {
     height: 10px;
     background: var(--jet-black);
     }
+    .projectsPageHeader {
+        height: 300px;
+    }
     .pageTitle {
         align-items: center;
         padding: 0;
+        padding-top: 2rem;
+    }
+    .pageTitle::after{
+        margin-bottom: 0;
     }
 }

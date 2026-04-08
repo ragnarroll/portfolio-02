@@ -32,25 +32,29 @@ const getCategoryClass = (category: string): string => {
         <div class="projectHeader">
 
             <div class="projectHeaderText">
-            {category && category.length > 0 && (
-                <div class="headerProjectCategory">
-                    {category.map((cat: string) => <p class={`headerCategory ${getCategoryClass(cat)}`}>{cat}</p>)}
-                </div>
-            )}
+            
 
             <h3>{title}</h3>
             {subtitle && <h4>{subtitle}</h4>}
             {description && <p>{description}</p>}
-            {tags && tags.length > 0 && (
+            
+            {attachments && <a href={attachments} target="_blank" class="viewProjectButton">View full project (pdf) ↗︎</a>}
+        </div>
+        <!-- 
+        {category && category.length > 0 && (
+                <div class="headerProjectCategory">
+                    {category.map((cat: string) => <p class={`headerCategory ${getCategoryClass(cat)}`}>{cat}</p>)}
+                </div>
+            )}
+        {tags && tags.length > 0 && (
                 <div class = "projectTags">
                     {tags.map((tag: string) => <p class="tag">{tag}</p>)}
                 </div>
             )}
-        </div>
-        
+        -->
             <div class="projectHeaderImage">
                 {image && image.src && <img src={image.src} alt={image.alt} />}
-                {attachments && <a href={attachments} target="_blank" class="viewProjectButton">View full project</a>}
+                
             </div>
         </div>
         <div class="projectContainer">

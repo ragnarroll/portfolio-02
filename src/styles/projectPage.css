@@ -12,6 +12,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: start;
     justify-content: center;
     gap: 0.5rem;
 }
@@ -32,11 +33,12 @@
     text-decoration: none;
     color: white;
     display: flex;
-    margin: 0 auto;
     padding: 0.5rem 2rem;
+    margin-top: 1rem;
     width: fit-content;
-    background-color: var(--orange);
+    background-color: var(--light-orange);
     border: 2px solid var(--orange);
+    color: var(--jet-black);
     border-radius: 15px;
     text-align: center;
 }

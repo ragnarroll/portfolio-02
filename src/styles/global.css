@@ -58,6 +58,17 @@ h4 {
 
 /* nav bar */
 
+.topbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    justify-content: space-between;
+    background: var(--background);
+    padding: 2rem 3rem;
+    z-index: 1000;
+}
+
 nav {
     /* to make it a fixed, distinct bar
     position: fixed;
@@ -68,16 +79,8 @@ nav {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     */
-    position: sticky;
-    top: 0;
-    width: 100%;
-    height: 60px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background: var(--background);
-    padding: 2rem 3rem;
-    z-index: 1000;
 }
 
 nav p a {
@@ -93,7 +96,7 @@ nav ul{
     list-style: none;
 }
 
-nav ul li:last-child {
+.topbar li:last-child {
         display: none;
     }
 
@@ -139,7 +142,7 @@ nav li a {
     flex-direction: column;
     align-items: center;
     padding-top: 2rem;
-    z-index: 1000;
+    z-index: 2000;
 }
 
 .sidebar ul {
@@ -153,15 +156,24 @@ nav li a {
     width: 100%;
 }
 
+/* .sidebar.nav ul li:last-child {
+        display: none;
+    }
+        */
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     /* Hide the desktop navigation menu items on mobile */
-    nav ul li:not(:last-child) {
+    .topbar li:not(:last-child) {
         display: none;
     }
     
     /* Show the menu toggle button */
-    nav ul li:last-child {
+    .topbar li:last-child {
+        display: flex;
+    }
+
+    .sidebar li {
         display: flex;
     }
 }
