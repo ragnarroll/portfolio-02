@@ -112,7 +112,7 @@ nav li{
     text-transform: uppercase;
 }
 
-nav li:hover::after {
+.topbar li:hover::after {
     content: '';
     position: absolute;
     top: 15px;
@@ -175,6 +175,12 @@ nav li a {
 
     .sidebar li {
         display: flex;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        display: none !important;
     }
 }
 
@@ -691,6 +697,9 @@ nav li a {
     .about-text {
         padding: 2rem;
     }
+    .featured {
+        padding: 10rem 2rem;
+    }
     .featuredWorks {
         flex-direction: column;
     }
@@ -704,7 +713,6 @@ nav li a {
      .principles {
         flex-direction: column;
         gap: 2rem;
-        padding: 5rem 2rem;
     }
     .focusAreas {
         height: auto;
