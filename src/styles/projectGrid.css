@@ -288,3 +288,10 @@ a {
         margin-bottom: 0;
     }
 }
+
+@media (max-width: 480px) {
+.projectCardImage img {
+    width: 250px;
+    height: 150px;
+}
+}
