@@ -4,8 +4,8 @@ category:
   - Rethinking Pathways to Success
   - Place-Based Education
 title: The Community University Model
-subtitle: A model for place-based public universities
-description: A paradigm shift from 'education for self-enlargement' to 'education as collective healing.' Proposes publicly-funded universities centered on geographic communities, with students as public servants addressing community-defined needs through democratic dialogue.
+subtitle: Transforming college from a private good to a public process
+description: College in the utilitarian view is a private good, delivering a return on investment. I reimagine the university as a public process that addresses local needs while training community members. 
 image:
   src: "/../asu-stock.jpg"
   alt: "a picture of asu's social embeddedness report"
@@ -17,42 +17,33 @@ attachments: ../../Portfolio-UDP-Final.pdf
 
 ### Here’s the *Wicked Problem.*
 
-Higher ed has reached an inflection point: the cost of education is rising while public faith is falling. The benefits of education are still present, but they are offered unequally:
+Higher ed has reached an inflection point: the cost of education is rising while public faith is falling. 
 
-- Higher education is still delivering a ROI, according to the CEW.
-- “Lower Education” : debt, risk, clustered at the bottom, while opportunity clustered at the top.
-- Loans and grants are being eliminated, further removing the ladder to opportunity.
+Although the benefits of education are still present, they are offered unequally. According to the Georgetown Center on Education and the Workforce, higher education delivers a significant ROI. However, higher education is a tiered system, where the benefits are clustered at the top, and risk is clustered at the bottom. Those from low-income backgrounds are often sent to institutions that deliver a small or negative ROI, and confer large amounts of debt without enhancing opportunity. To make matters worse, government loans and grants are being systematically eliminated, further corroding the ladder to opportunity.
 
-Absent real investment in a social ladder, higher education will exacerbate inequality rather than mitigate it. 
-
-
-
+Absent real investment in a social ladder, higher education will exacerbate inequality rather than mitigate it.
 
 ### How could things be different?
 
-Reimagine higher education as a public institution.
+Now is the time to reimagine higher education as a public institution. To make this happen, we would need a new “land grant” or “space race” push towards funding higher education.
 
-A new “land grant” or “space race” push towards funding higher education.
-
-A shift from future, individual ROI to present, locally shared outcomes.
-
-Focusing on solving local issues, enhancing local government, boosting local businesses, and improving neighborhood outcomes.
+In this new wave, we would need to shift the focus from granting an ROI to individuals to tackling local issues, supporting community members, and enhancing the regional economy all at once. Instead of using metrics like ROI and graduation rate, the community-university model would measure its success against local public indicators, local economic metrics, and the social and health outcomes of neighborhoods.
 
 ### What can we do now?
 
-Here’s one bright and bold model: ASU, a self-proclaimed “national service university.”
+Federal funding might be dissolving, but states can increase their investment in higher education. One bright and bold example is Arizona State University, a self-proclaimed “national service university.”
 
-We can follow their playbook.  I’ve organized their range of innovations in order of the leverage point they intervene at, according to Donnella Meadows.
+Other states can follow their playbook. I’ve organized their range of innovations in order of the leverage point they intervene at, according to Donnella Meadows.
 
 |leverage point|intervention|
 |--------------|------------|
-|The structure of stocks, flows, nodes|Multiple entry points, high schools, hospitals|
-|Positive feedback loops|Teaching teachers, awards|
-|The structure of information flows|State of Arizona reports, Arizona indicators|
-|The rules of the system|publicly engaged scholarship|
-|The power to change structure|department of community, municipal relations|
-|The goals of the system|inclusive excellence, promote the common good|
-|The paradigm|Michael Crow presidency, “national service university,” new ASU charter|
+|10. The structure of stocks, flows, nodes|Multiple entry points, high schools, hospitals|
+|7. Positive feedback loops|Teaching teachers, awards|
+|6. The structure of information flows|State of Arizona reports, Arizona indicators|
+|5. The rules of the system|publicly engaged scholarship|
+|4. The power to change structure|department of community, municipal relations|
+|3. The goals of the system|inclusive excellence, promote the common good|
+|2. The paradigm|Michael Crow presidency, “national service university,” new ASU charter|
 
 The leverage points are numbered 1-12, with 1 being the most powerful change, and 12 being the least impactful change. Below I will describe several of the innovations and the leverage point they interact at.
 
