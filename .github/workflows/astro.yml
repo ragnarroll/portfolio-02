@@ -70,7 +70,7 @@ jobs:
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
         run: |
-          ${{ steps.detect-package-manager.outputs.runner }} astro build 
+          ${{ steps.detect-package-manager.outputs.runner }} npm run build 
         working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
