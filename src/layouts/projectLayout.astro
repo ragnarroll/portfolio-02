@@ -45,16 +45,7 @@ const getCategoryClass = (category: string): string => {
             {attachments && <a href={attachments} target="_blank" class="viewProjectButton">View full project (pdf) ↗︎</a>}
         </div>
         <!-- 
-        {category && category.length > 0 && (
-                <div class="headerProjectCategory">
-                    {category.map((cat: string) => <p class={`headerCategory ${getCategoryClass(cat)}`}>{cat}</p>)}
-                </div>
-            )}
-        {tags && tags.length > 0 && (
-                <div class = "projectTags">
-                    {tags.map((tag: string) => <p class="tag">{tag}</p>)}
-                </div>
-            )}
+        
         -->
             <div class="projectHeaderImage">
                 {image && image.src && <img src={image.src} alt={image.alt} />}
@@ -62,7 +53,24 @@ const getCategoryClass = (category: string): string => {
             </div>
         </div>
         <div class="projectContainer">
-            <slot />
+            <div class = "projectMetaData">
+                <h2>Project Overview</h2>
+                <p>Focus Area</p>
+                {category && category.length > 0 && (
+                <div class="headerProjectCategory">
+                    {category.map((cat: string) => <p class={`headerCategory ${getCategoryClass(cat)}`}>{cat}</p>)}
+                </div>
+            )}
+            <p>Skills</p>
+        {tags && tags.length > 0 && (
+                <div class = "projectTags">
+                    {tags.map((tag: string) => <p class="tag">{tag}</p>)}
+                </div>
+            )} 
+            </div>
+            <div class = "projectText">
+                <slot />
+            </div>
         </div>
     </main>
     </body>

@@ -9,10 +9,12 @@ image: {
     alt: "a picture of a brick building on Rutgers' University's Livingston College campus, surrounded by fall trees",
 }
 tags: [Research, Design Thinking]
+attachments:
+    - ../../portfolio-livingston-college.pdf
 ---
 
 
-### The problem: Racial discrimination in education, employment and housing
+### The Context: Systemic Racism
 
 It’s 1967, at the peak of the civil rights movement, and Martin Luther King Jr. is assassinated. A wave of protests erupt across the country, in the streets, around city halls, on university campuses. Change is demanded to address the racism that kept Black and brown people from educational and employment opportunities.
 
@@ -22,7 +24,7 @@ As part of their initiatives for racial equality, Livingston College is founded 
 
 Educators, administrators, and students come together to answer this question: how do we build a college that addresses structural racism in the education system and urban planning of New Brunswick, New Jersey?
 
-### Their approach: affirmative action & applied public scholarship
+### Affirmative Action & Engaged Public Scholarship
 
 They analyzed the forces contributing to inequality:
 The K-12 system was becoming de facto segregated due to white flight.
@@ -33,7 +35,7 @@ They created a college to research and respond directly to those forces:
 helping the local K-12 education system by providing teachers, scholarship, and curriculum
 Led urban planning initiatives to curb urban displacement and provide low-income housing.
 
-### Their results: limited success followed by a lack of continuity and white backlash
+### Limited Results
 
 The initial school design struggled as it failed to address the needs that students had that middle-class white students did not have before. There were virtually no academic, mental, or financial support services, nor recreational facilities and activities for students living on campus. Its suburban location isolated students from their families and the rest of the university.
 
