@@ -1,14 +1,16 @@
 ---
 layout: ../../layouts/projectLayout.astro
-category: [Place-Based Education]
+category: 
+   - Place-Based Education
 title: Rutgers University’s Livingston College
 subtitle: An experimental college for social change
 description: A case study of Rutgers University’s Livingston College, an experimental college in the 70s dedicated to addressing local educational inequities and urban displacement both on campus and in the city of New Brunswick, New Jersey.
-image: {
-    src: "/../livingston-college.png",
-    alt: "a picture of a brick building on Rutgers' University's Livingston College campus, surrounded by fall trees",
-}
-tags: [Research, Design Thinking]
+image: 
+    src: "/../livingston-college.png"
+    alt: "a picture of a brick building on Rutgers' University's Livingston College campus, surrounded by fall trees"
+tags: 
+   - Research 
+   - Design Thinking
 attachments:
     - ../../portfolio-livingston-college.pdf
 ---

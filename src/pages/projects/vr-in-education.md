@@ -1,15 +1,17 @@
 ---
 layout: "../../layouts/projectLayout.astro"
 category: 
-- Technology and Educational Equity
+   - Technology and Educational Equity
 title: VR in Education
 subtitle: VR’s potential impacts on equity and teaching
 description: 'I reject the notion that VR will be a panacea for educational inequality. Instead, I identify three specific use cases where VR’s impact might be significant: vocational training, social & emotional learning, and STEM education.'
 image: 
     src: "/../vr-education.webp"
     alt: "a picture of elementary school kids in a classroom, sitting around a table wearing oculus VR headsets"
-tags: [Research]
-attachments: ../../portfolio-vr-education.pdf
+tags: 
+   - Research
+attachments: 
+   - ../../portfolio-vr-education.pdf
 ---
 
 ### Background

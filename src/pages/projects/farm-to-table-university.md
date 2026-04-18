@@ -1,6 +1,7 @@
 ---
 layout: "../../layouts/projectLayout.astro"
-category: [Place-Based Education]
+category: 
+   - Place-Based Education
 title: Cornucopia College
 subtitle: A farm-to-table microcollege for a healthier food industry
 description: A micro-college integrating agriculture, culinary arts, sustainability, and food policy. Students experience the entire farm-to-table process while specializing in climate change, business, culinary arts, or policy. Inspired by Deep Springs College and Wageningen University.
@@ -9,8 +10,8 @@ image:
     alt: "a picture of asu's social embeddedness report"
 tags: [Curriculum Design, Design Thinking]
 attachments: 
-- ../../portfolio-cornucopia-paper.pdf
-- ../../portfolio-cornucopia-presentation.pdf
+   - ../../portfolio-cornucopia-paper.pdf
+   - ../../portfolio-cornucopia-presentation.pdf
 ---
 
 

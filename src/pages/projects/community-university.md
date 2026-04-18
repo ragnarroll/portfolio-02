@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/projectLayout.astro
 category:
-  - Rethinking Pathways to Success
-  - Place-Based Education
+   - Rethinking Pathways to Success
+   - Place-Based Education
 title: The Community University Model
 subtitle: Transforming college from a private good to a public process
 description: College in the utilitarian view is a private good, delivering a return on investment. I reimagine the university as a public process that addresses local needs while training community members. 
@@ -10,8 +10,8 @@ image:
   src: "/../asu-stock.jpg"
   alt: "a picture of asu's social embeddedness report"
 tags:
-  - Curriculum Design
-  - Design Thinking
+   - Curriculum Design
+   - Design Thinking
 attachments: ../../Portfolio-UDP-Final.pdf
 ---
 

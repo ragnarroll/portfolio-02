@@ -1,18 +1,18 @@
 ---
 layout: ../../layouts/projectLayout.astro
 category:
-  - Place-Based Education
+   - Place-Based Education
 title: The Tennis Journey Workshop
 subtitle: Lifelong learning and burnout prevention
 description: A workshop series for StarrMark Tennis Academy addressing athlete burnout among high school players by promoting a lifelong learning approach to sports. Combined a college athlete panel with reflective exercises on motivation, priorities, and goal-setting.
 image:
-  src: "../../tennis-journey-blue.png"
-  alt: ""
+   src: "../../tennis-journey-blue.png"
+   alt: ""
 tags:
-  - Curriculum Design
-  - Teaching
+   - Curriculum Design
+   - Teaching
 attachments:
-  - ../../portfolio-tennis-journey.pdf
+   - ../../portfolio-tennis-journey.pdf
 ---
 
 ### Problem/Background

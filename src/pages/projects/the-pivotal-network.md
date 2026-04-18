@@ -1,13 +1,17 @@
 ---
 layout: ../../layouts/projectLayout.astro
-category: Rethinking Pathways to Success
+category: 
+   - Rethinking Pathways to Success
 title: The Pivotal Network
 subtitle: A co-designed teacher network for first-generation low-income students
 description: A professional development network of teachers dedicated to propelling first-generation low-income (FGLI) students to college. I helped facilitate design sprints, manage our website, and lead research among FGLI students.
 image: 
     src: "../../tpn-website-2.png"
     alt: "a screenshot of a website hero section with geometric nodes and patterns"
-tags: [Web Design & Development, Project Management, Design Thinking]
+tags: 
+   - Web Design & Development
+   - Project Management
+   - Design Thinking
 attachments:
 ---
 

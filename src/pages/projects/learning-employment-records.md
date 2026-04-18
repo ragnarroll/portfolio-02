@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/projectLayout.astro
 category: 
-- Technology and Educational Equity 
-- Rethinking Pathways to Success
+   - Technology and Educational Equity 
+   - Rethinking Pathways to Success
 title: LERs and Skills-First Hiring
 subtitle: A credentialing technology that enables skills-first hiring
 description: A diffusion of innovations analysis of Learning and Employment Records (LERs)—a complicated but potentially transformative innovation in the training and hiring ecosystem. As the labor market faces shortages and retraining becomes more common, LERs could enable skills-based hiring.
