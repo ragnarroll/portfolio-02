@@ -317,7 +317,7 @@ nav li a {
     display: flex;
     height: 100vh;
     margin: 0;
-    background-image: url('/../hero-geometric-background.png');
+    background-image: url('/../hero-geometric-bg.png');
     background-size: cover;
     background-position: bottom right;
 }
