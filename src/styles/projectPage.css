@@ -126,8 +126,9 @@
 
 .projectText {
     flex: 3;
-    padding-left: 2%;
-    border-left: 1px solid gray;
+    padding: 0 2rem 0 5rem;
+    text-align: justify;
+    border-left: 1px solid lightgrey;
 }
 
 h3, p {
@@ -176,10 +177,11 @@ td, th {
 
     .projectMetaData {
         position: relative;
-        margin-bottom: 60px;
+        margin-bottom: 100px;
+        border-bottom: 1px solid lightgrey;
     }
     .projectText {
         border-left: none;
-        padding-left: none;
+        padding: 0 2rem;
     }
 }

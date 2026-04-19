@@ -15,7 +15,7 @@ attachments:
 ---
 
 
-### Here’s the problem: Industrialized education and agriculture
+### Problem: Industrialized education and agriculture
 
 Our food industry is just that—an industry. Industrialized agriculture and food processing have been linked to health epidemics and climate crises, and there is now bipartisan support to restructure our food industry. Meanwhile, many students attend urban universities that are completely disconnected from agriculture and the food industry. 
 

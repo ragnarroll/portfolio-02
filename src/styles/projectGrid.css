@@ -39,7 +39,6 @@
     grid-template-columns: 1fr 3fr;
     gap: 0;
     width: 100%;
-    border-top: 2px solid var(--jet-black);
     height: calc(100vh - 100px);
     overflow: hidden;
 }
@@ -53,7 +52,7 @@
     flex-direction: column;
     justify-content: flex-start;
     padding: 2rem;
-    border-right: 2px solid var(--jet-black);
+    border-right: 1px solid lightgrey;
     height: calc(100vh - 100px);
     overflow: hidden;
 }
@@ -258,9 +257,8 @@ a {
     }
     .filterSection {
         position: relative;
-        height: 350px;
+        height: 400px;
         border-right: none;
-        display: none;
     }
     .projectsGrid {
         border: none;
